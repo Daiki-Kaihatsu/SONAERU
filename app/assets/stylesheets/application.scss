@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "homes";
 
 // ログイン画面
 
@@ -11,9 +12,11 @@
 // 「ログインしました」などのフラッシュ用スタイル
 
 .alert-notice {
-  @extend .alert-info;
+  @extend .alert-secondary;
+  text-align: center;
 }
 
 .alert-alert {
   @extend .alert-danger;
+  text-align: center;
 }
