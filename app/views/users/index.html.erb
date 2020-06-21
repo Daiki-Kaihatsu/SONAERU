@@ -1,0 +1,9 @@
+<h1 class="text-center user-itiran-margin">ユーザー一覧</h1>
+<div class="container">
+  <div class="row">
+<% @users.each do |user|%>
+  <%= image_tag attachment_url(user,:background_image)%>
+  <%= image_tag attachment_url(user,:profile_image)%>
+  <%= user.name%>
+
+<% end %>

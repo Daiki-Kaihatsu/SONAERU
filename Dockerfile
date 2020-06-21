@@ -1,5 +1,4 @@
-# コピペでOK, app_nameもそのままでOK
-# 19.01.20現在最新安定版のイメージを取得
+
 FROM ruby:2.7.1
 
 # 必要なパッケージのインストール（基本的に必要になってくるものだと思うので削らないこと）
@@ -13,13 +12,6 @@ RUN mkdir /app_name
 ##作業ディレクトリ名をAPP_ROOTに割り当てて、以下$APP_ROOTで参照
 ENV APP_ROOT /app_name
 WORKDIR $APP_ROOT
-
-##Cache bundle install#################
-WORKDIR /tmp
-ADD ./Gemfile Gemfile
-ADD ./Gemfile.lock Gemfile.lock
-RUN bundle install
-#######################################
 
 # ホスト側（ローカル）のGemfileを追加する（ローカルのGemfileは【３】で作成）
 ADD ./Gemfile $APP_ROOT/Gemfile

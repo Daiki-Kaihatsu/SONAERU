@@ -5,11 +5,14 @@ body {
   // background-repeat:  no-repeat; 
   // background-size:  cover; 
   // background-position: 0 30%;
-}
+//   background-image:url(top-image.jpg);
+//   background-repeat:  no-repeat; 
+//   background-size:  cover; 
+ }
 
 .title {
-  font-family:cursive;
-  color: dimgrey;
+  font-family:serif;
+  color: papayawhip;
   font-size: 100px;
   padding: 10px 0;
   text-align: center;
@@ -26,6 +29,10 @@ body {
   height: 58px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+.subtitle{
+  color:white;
 }
 
 //ボタン

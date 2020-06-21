@@ -1,25 +1,21 @@
-<div class="container-login">
-  <h1><%= t('.sign_in') %></h1>
-  <%= render 'shared/flash_messages'%>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+<div class="container bg-color">
+  <div class="row">
+    <div class="col-md-6 registration_margin">      
+      <div class="registration_form">
+        <%= render 'shared/flash_messages'%>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <h1><%= t('.sign_in') %></h1>
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, autocomplete: 'name', class: 'form-control' %>
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: 'current-password',
+              class: 'form-control',
+              required: true,
+              minlength: @minimum_password_length,
+              maxlength: '30' %>
+        <%= f.submit  t('.sign_in'), class: 'button' %>
+        <% end %>
+      </div>
     </div>
-
-    <div class="form-group">
-      <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: 'current-password',
-          class: 'form-control',
-          required: true,
-          minlength: @minimum_password_length,
-          maxlength: '30' %>
-    </div>
-
-
-    <div class="form-group">
-      <%= f.submit  t('.sign_in'), class: 'btn btn-primary' %>
-    </div>
-  <% end %>
-
+  </div>
 </div>

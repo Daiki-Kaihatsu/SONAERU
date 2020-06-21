@@ -6,4 +6,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       redirect_to root_path, alert: 'ゲストユーザーは編集・削除できません。'
     end
   end
+  # ユーザー登録後にマイページに遷移
+  def after_inactive_sign_up_path_for(resource)
+    user_path(resource)
+  end
 end
