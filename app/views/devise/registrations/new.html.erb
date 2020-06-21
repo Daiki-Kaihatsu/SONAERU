@@ -8,13 +8,14 @@
 
           <%= f.label :background_image %>
           <div id="cover-bg-image" class="img-profile bg-relative">
-            <%= image_tag 'none_image.jpg',class:'bg-image'%>
+            <%= image_tag 'none_image.png',class:'bg-image'%>
             <i class="fa fa-camera"></i>
           </div>
           <%= f.attachment_field :background_image, autofocus: true, autocomplete: 'background_image'%>
+          
           <%= f.label :profile_image %>
           <div id="cover-profile-image" class="img-profile profile-relative">
-            <%= image_tag 'noimage.jpg',class:'profile-image'%>
+            <%= image_tag 'noimage.png',class:'profile-image'%>
           </div>
 
           <%= f.attachment_field :profile_image, autofocus: true, autocomplete: 'profile_image'%>

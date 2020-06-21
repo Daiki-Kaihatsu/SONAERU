@@ -1,9 +1,14 @@
-<h1 class="text-center user-itiran-margin">ユーザー一覧</h1>
-<div class="container">
-  <div class="row">
 <% @users.each do |user|%>
-  <%= image_tag attachment_url(user,:background_image)%>
-  <%= image_tag attachment_url(user,:profile_image)%>
-  <%= user.name%>
-
+  <div>
+  <% if user.profile_image.present? %>
+    <%= link_to user_path(user) do%>
+      <%= attachment_image_tag user,:profile_image,class:'profileImage-index'%>
+    <% end %>
+  <%else%>
+    <%= image_tag 'noimage.png' ,class:'img-responsive card-img' %>
+  <% end %>
+  <%=user.name%>
+  <%=user.email%>
+  <hr>
+  </div>
 <% end %>

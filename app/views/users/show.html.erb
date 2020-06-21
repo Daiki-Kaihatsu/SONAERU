@@ -8,9 +8,11 @@
         <div class="flex">
           <div class="display-flex">
             <%= attachment_image_tag @user,:profile_image, fallback:"noimage.png",class:'img-responsive profile-image-show'%>
-            <div class="text-right">
-              <%= link_to '編集', edit_user_registration_path,class:'btn-circle-border-simple',style:'text-decoration: none;' %>
-            </div>
+            <% if @user.id == current_user.id %>
+              <div class="text-right">
+                <%= link_to '編集', edit_user_registration_path,class:'btn-circle-border-simple',style:'text-decoration: none;' %>
+              </div>
+            <% end %>
           </div>
         </div>
         <br>
