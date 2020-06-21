@@ -2,6 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body{
-  background-color:whitesmoke;
+.bg-image-show{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+// ユーザー編集ボタン
+.btn-circle-border-simple {
+  display: inline-block;
+  color:#4689FF	;
+  width: 75px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  border: solid 2px;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+}
+
+.display-flex{
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image-show{
+  margin: 0 auto;
+  margin-top: -60px;
+  border-radius: 50%;
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.center-show{
+  text-align: center;
+  margin-right: 65px;
+  margin-top: -20px;
+
+}
+
+.profile{
+  color: rgb(121,108,108);
+}
+
+
+.profile-show{
+
 }
