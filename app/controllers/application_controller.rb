@@ -16,7 +16,17 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:sign_up, keys:[:profile])
       devise_parameter_sanitizer.permit(:sign_up, keys:[:profile_image])
       devise_parameter_sanitizer.permit(:sign_up, keys:[:background_image])
+
+      # アカウント変更時に名前とコメントとプロフィール画像と背景画像を許可する。
+      devise_parameter_sanitizer.permit(:account_update, keys:[:name])
+      devise_parameter_sanitizer.permit(:account_update, keys:[:email])
+      devise_parameter_sanitizer.permit(:account_update, keys:[:profile])
+      devise_parameter_sanitizer.permit(:account_update, keys:[:profile_image])
+      devise_parameter_sanitizer.permit(:account_update, keys:[:background_image])
+
     end
+
+
 
 
 end
